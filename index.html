@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>鸿裕助手 — 官方下载与说明</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#2dd4bf; /* 青绿 */
+      --accent2:#f5d27a; /* 金色 */
+      --bg:#0b1220; /* 深色基底 */
+      --card:#0b1220;
+      --muted:#9fb3c8;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      background:
+        radial-gradient(1430px 728px at 20% -10%, rgba(45,212,191,0.432), transparent 62%),
+        radial-gradient(1300px 676px at 80% 0%, rgba(245,210,122,0.504), transparent 60%),
+        radial-gradient(1170px 650px at 0% 100%, rgba(45,212,191,0.264), transparent 60%),
+        radial-gradient(1170px 650px at 100% 100%, rgba(245,210,122,0.312), transparent 60%),
+        linear-gradient(180deg,#0a1b2b 0%, var(--bg) 100%);
+      background-attachment: fixed;
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo{flex-shrink:0}
+    .logo .mark{flex-shrink:0}
+    .logo .mark{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#7dd3fc);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#001219}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:500}
+    nav a:first-child{margin-left:0}
+    nav a:hover{color:#fff}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start;margin-top:12px}
+    .hero .left h1{font-size:34px;margin:0 0 12px}
+    .hero .left p{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;background:var(--accent);color:#002;font-weight:700;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6);color:#e6eef6}
+    .small{font-size:13px;color:var(--muted)}
+    .flow-img{display:block;margin:0 auto;width:100%;max-width:360px;height:auto;border-radius:8px}
+    .highlight{background:linear-gradient(180deg, rgba(14,165,164,0.10), rgba(255,255,255,0.02));border:1px solid rgba(14,165,164,0.25)}
+    .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--accent);color:#002;font-weight:700;font-size:12px;margin-right:8px}
+    .badge.gold{background:linear-gradient(135deg,#f5d27a,#eab308);color:#3b2600}
+    .gold-title{color:#f5d27a;font-weight:800;letter-spacing:0.4px;text-shadow:0 0 8px rgba(245,210,122,0.18)}
+    .key{font-weight:800;font-size:16px}
+    .k1{color:#ef4444}
+    .k2{color:#f59e0b}
+    .k3{color:#0ea5a4}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
+    .feature h3{margin:0 0 8px}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+    footer{margin:48px 0 20px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;} .features{grid-template-columns:repeat(2,1fr)} .flow-img{max-width:none}}
+    @media (max-width:600px){
+      .features{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:6px}
+      nav{margin-top:4px;overflow:visible;white-space:normal;-webkit-overflow-scrolling:auto;font-size:14px}
+      nav a{display:inline-block;margin:6px 8px 0 0}
+      nav a.btn{margin:6px 8px 0 0;padding:8px 12px;border-radius:8px}
+      .logo{gap:8px}
+    }
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);margin:18px 0;border-radius:2px}
+    form.input-grid{display:grid;gap:12px}
+    input,textarea{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#e6eef6;outline:none}
+    textarea{min-height:100px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark"><img src="logo.png" alt="鸿裕助手" style="width:100%;height:100%;object-fit:cover;border-radius:8px" /></div>
+        <div>
+          <div style="font-weight:700">鸿裕助手</div>
+          <div class="small">简单 · 直接 · 方便</div>
+        </div>
+      </div>
+      <nav>
+        <a href="download.html" class="btn" style="margin-left:0">立即下载</a>
+        <a href="guide.html">使用说明</a>
+        <a href="download.html">下载说明</a>
+        <a href="faq.html">常见问题</a>
+        <a href="contact.html">联系我们</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="left">
+          <h1>鸿裕助手 — 官方下载与说明</h1>
+          <p>这是鸿裕助手的官方介绍页。查看使用说明、下载程序并获取常见问题解答。</p>
+          
+          <div class="card highlight" style="margin-top:12px;border-left:3px solid #ef4444">
+            <h3 class="key k2" style="margin:0 0 8px">体育彩票注意事项</h3>
+            <ul class="small" style="margin:0 0 0 18px">
+              <li><span class="key k1">合法参与</span>：仅限年满18周岁的成年人参与，<span class="key k1">未成年人禁止</span>购买彩票。</li>
+              <li><span class="key k2">理性购彩</span>：量力而行，设置预算，切勿借贷、透支或将购彩作为收入来源。</li>
+              <li><span class="key k2">官方渠道</span>：请通过国家体育彩票官网、官方客户端或授权网点购票，<span class="key k1">拒绝私盘与非法网站</span>。</li>
+              <li><span class="key k1">风险提示</span>：彩票具备偶然性，无“必中”“内幕数据”，谨防以荐号、稳赚为名的诈骗。</li>
+              <li><span class="key k2">信息核验</span>：以官方公布的开奖信息为准，兑奖请在规定期限内携带有效凭证办理。</li>
+              <li><span class="key k3">账号与隐私</span>：妥善保管账号、验证码与票面信息，不随意向他人泄露。</li>
+              <li><span class="key k3">遵守法规</span>：自觉遵守所在地法律法规与平台规则，文明理性参与公益彩票。</li>
+            </ul>
+            <p class="small" style="margin-top:8px;color:#ef9ca9"><span class="key k2">温馨提示</span>：彩票公益，重在参与。本站仅提供信息展示与工具服务，不提供任何非法赌博活动。</p>
+          </div>
+          <div class="divider"></div>
+          <div class="card highlight" style="margin-top:12px">
+            <div class="badge">重要</div><strong class="key k2">服务流程说明</strong>
+            <ol style="margin:8px 0 0 18px">
+              <li><span class="key k1">用户准备</span>：下载安装、注册登录并完成基础设置。</li>
+              <li><span class="key k2">选择服务</span>：在应用内选择功能，确认参数与费用。</li>
+              <li><span class="key k2">提交下单</span>：系统校验信息并生成订单。</li>
+              <li><span class="key k2">支付确认</span>：通过官方渠道完成支付，进入执行队列。</li>
+              <li><span class="key k3">任务执行</span>：后台按规则调度执行，过程全程记录。</li>
+              <li><span class="key k3">结果回传</span>：完成后结果同步客户端并通知提醒。</li>
+              <li><span class="key k2">复核结算</span>：查看结果、下载凭证/报表，订单完结。</li>
+              <li><span class="key k3">售后支持</span>：如需调整或遇到问题，应用内发起售后。</li>
+            </ol>
+          </div>
+          <div class="card highlight" style="margin-top:12px">
+            <div class="badge gold">提示</div><strong class="gold-title">软件功能说明</strong>
+            <ol style="margin:8px 0 0 18px">
+              <li><span class="key k2">鸿裕助手</span> 是一款 <span class="key k3">竞彩下单APP</span>，<span class="key k3">软件功能</span> 包含如下。</li>
+              <li><span class="key k1">《竞彩足球》</span> <span class="key k2">《竞彩篮球》</span> <span class="key k3">《大乐透》</span> <span class="key k3">《七星彩》</span> <span class="key k3">《排列三》</span> <span class="key k3">《排列五》</span></li>
+              <li><span class="key k2">专业赛事分析</span>：邀请 <span class="key k3">专业足球分析师团队</span>。</li>
+              <li>对每场赛事从 <span class="key k3">球队战术风格</span>、<span class="key k3">球员状态</span>、<span class="key k3">伤病情况</span> 等多维度深入解读分析，给出 <span class="key k1">专业预测</span>。</li>
+              <li>提供 <span class="key k2">赛事赔率分析</span>，包括 <span class="key k3">欧亚指数对比</span>、<span class="key k3">历史数据统计</span> 等，帮助用户全面了解 <span class="key k2">市场动态</span>。</li>
+            </ol>
+          </div>
+          <div class="cta" style="margin:24px 0; justify-content:center">
+            <button class="btn" onclick="window.location.href='download.html'">立即下载</button>
+            <button class="btn ghost" onclick="window.location.href='guide.html'">使用说明</button>
+          </div>
+        </div>
+        <aside>
+          <div class="card" style="margin-top:12px">
+            <img src="liucheng.jpg" alt="示例图片" class="flow-img" />
+          </div>
+        </aside>
+      </section>
+
+
+
+      <section id="guide">
+        <h2 style="margin-top:44px">应用说明与注意事项</h2>
+        <div class="card" style="margin-top:12px">
+          <ol style="margin:0 0 0 18px">
+            <li>从顶部“立即下载”进入下载页获取最新安装包。</li>
+            <li>安装后用手机号注册/登录，按向导完成基础设置。</li>
+            <li>如被防护软件拦截，选择“仍要运行”或加入白名单。</li>
+          </ol>
+          <div class="divider"></div>
+          <ul style="margin:0 0 0 18px">
+            <li>仅从本站下载，谨防仿冒链接。</li>
+            <li>保持网络畅通以获得更新与云端能力。</li>
+            <li>更多帮助请前往“使用说明”“常见问题”。</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> 需要合作制作联系
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function scrollToSection(id){const el=document.getElementById(id);if(el) el.scrollIntoView({behavior:'smooth'});}
+    function resetForm(){document.getElementById('contactForm').reset();}
+    function handleSubmit(e){e.preventDefault();alert('表单提交成功（演示）。');e.target.reset?.();}
+    function downloadHTML(){const doctype='<!doctype html>\n';const html=doctype+document.documentElement.outerHTML;const blob=new Blob([html],{type:'text/html'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='index.html';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);}
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>关于我们 - 鸿裕助手</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --accent:#2dd4bf; --accent2:#f5d27a; --bg:#0b1220; --muted:#9fb3c8 }
+    body { margin:0; font-family:Inter,system-ui; 
+      background:
+        radial-gradient(1430px 728px at 20% -10%, rgba(45,212,191,0.432), transparent 62%),
+        radial-gradient(1300px 676px at 80% 0%, rgba(245,210,122,0.504), transparent 60%),
+        radial-gradient(1170px 650px at 0% 100%, rgba(45,212,191,0.264), transparent 60%),
+        radial-gradient(1170px 650px at 100% 100%, rgba(245,210,122,0.312), transparent 60%),
+        linear-gradient(180deg,#0a1b2b 0%, var(--bg) 100%);
+      background-attachment:fixed;
+      color:#e6eef6; line-height:1.6; }
+    .container { max-width:800px; margin:0 auto; padding:28px; }
+    a { color:var(--accent); text-decoration:none; }
+    header { margin-bottom:32px; }
+    footer { margin-top:48px; color:var(--muted); font-size:14px; text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>关于我们</h1>
+      <p><a href="index.html">← 返回首页</a></p>
+    </header>
+
+    <main>
+      <p>这里是关于我们页面，你可以在这里介绍团队、项目背景、联系方式等。</p>
+      <p>比如：</p>
+      <ul>
+        <li>我们的目标：打造简单易用的网站</li>
+        <li>我们的团队：前端 / 后端 / 设计</li>
+        <li>联系方式：xxx@example.com</li>
+      </ul>
+    </main>
+
+    <footer>
+      © <span id="year"></span> 示例站点 · 制作 by 你
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
