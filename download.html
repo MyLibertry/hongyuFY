@@ -39,7 +39,7 @@
       <div style="display:grid;gap:8px">
         <div class="card" style="background:rgba(74, 228, 228, 0.12)">
           <strong>客服微信</strong>：请添加微信号 
-          <span id="wxId" style="display:inline-block;font-size:20px;font-weight:800;color:#ffffff;background:rgba(239,68,68,0.25);padding:4px 10px;border-radius:8px;cursor:pointer;user-select:all" onclick="copyWx()">LibertyLjx</span>
+          <span id="wxId" style="display:inline-block;font-size:20px;font-weight:800;color:#ffffff;background:rgba(239,68,68,0.25);padding:4px 10px;border-radius:8px;cursor:pointer;user-select:all" onclick="copyWx()">aiweisha97</span>
           <span id="copyTip" class="small" style="margin-left:8px;color:#94a3b8">点击复制</span>
           （工作时间 11:00-23:00）。添加后备注“获取下载链接”。
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
@@ -52,7 +52,7 @@
     </div>
     <script>
       function copyWx(){
-        const wx = 'LibertyLjx';
+        const wx = 'aiweisha97';
         try{ navigator.clipboard && navigator.clipboard.writeText(wx); }catch(e){}
         var tip = document.getElementById('copyTip');
         if(tip){ tip.textContent = '已复制'; setTimeout(function(){ tip.textContent = '点击复制'; }, 2000); }
